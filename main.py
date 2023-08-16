@@ -18,10 +18,6 @@ inventory = {
 def hello_api():
     return {"msg":"Hello FastAPI🚀"}
 
-@app.get("/hi-drew")
-def hello_drew():
-    return {"msg": "Hi Drew"}
-
 @app.get("/get-item/{item_id}")
 def get_item(item_id: int):
     return inventory[item_id]
